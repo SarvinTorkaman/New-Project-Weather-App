@@ -25,11 +25,16 @@
       <div class="weatherApp">
         <h1>Weather App</h1>
         <form>
-          <input type="text" placeholder="Enter a city..." autofocus />
-          <input type="submit" value="Search" />
+          <div class="row">
+            <div class="col-9">
+          <input type="text" class="form-control search-input" placeholder="Enter a city..." autofocus />
+        </div> 
+        <div class="col-3 p-0"><input type="submit" class="btn btn-primary w-100" value="Search" />
+        </div>
+        </div>
         </form>
         <hr />
-        <div class="row">
+        <div class="row second">
           <div class="col-6">
             <h2>New York</h2>
             <ul>
@@ -37,8 +42,10 @@
               <li class="detail">Humidity: 65%, Wind: 3.6km/h</li>
             </ul>
           </div>
-          <div class="col-6">🌦 10°C</div>
+          <div class="col-6 temp">🌦 10 <span class="unit">°C</span>
+            </div>
         </div>
+        <hr />
         <footer>
           This project was coded by Sarvin and is
           <a

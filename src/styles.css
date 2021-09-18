@@ -18,9 +18,9 @@ h2 {
   width: 326px;
 }
 .weatherApp {
-  max-width: 600px;
+  max-width:900px;
   margin: 30px auto;
-  padding: 20px;
+  padding: 30px;
   border: 1px solid rgb(148, 142, 142);
   border-radius: 5px;
 }
@@ -50,3 +50,56 @@ li.detail {
   line-height: 16px;
   width: 90.0469px;
 }
+
+.temp{
+  color:rgb(32, 33, 36);
+display:inline;
+font-family:"Google Sans", arial, sans-serif;
+font-size:48px;
+font-weight:400;
+height:auto;
+line-height:60px;
+width:auto;
+}
+.weatherApp footer{    
+font-size: 14px;
+margin-top: 40px;
+line-height: 18px;
+text-align: center;
+color: rgba(39,33,66,.4);
+}
+
+.weatherApp .unit{
+color: #212121;
+font-size: 28px;
+font-weight: 400;
+position: relative;
+line-height: 1;
+top: -16px;
+}
+
+.weatherApp .search-input{
+  display: inline-block;
+  background: #f9f7fe;
+  border: none;
+  padding: 15px 20px;
+  
+  border-radius: 6px;
+  color: rgba(39,33,66,.4);
+  font-size: 16px;
+  height: 50px;
+  line-height: 20px;}
+  
+  .weatherApp .btn{
+  background: #6d6bc1;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 15px 0;
+  border: none;
+  height: 50px;
+  
+}
+.row.second{
+  padding: 40px;
+}
+
