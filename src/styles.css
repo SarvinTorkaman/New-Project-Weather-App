@@ -1,3 +1,52 @@
-/* h1 {
-  color: red;
-} */
+body {
+  font-family: "Google Sans", arial, sans-serif;
+}
+h1 {
+  font-family: "Dosis", sans-serif;
+  margin: 20px auto 30px auto;
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+h2 {
+  color: rgb(32, 33, 36);
+  display: block;
+  font-size: 22px;
+  font-weight: 400;
+  height: 26px;
+  line-height: 26px;
+  text-align: left;
+  width: 326px;
+}
+.weatherApp {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid rgb(148, 142, 142);
+  border-radius: 5px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+form {
+  margin-bottom: 30px;
+}
+li.time {
+  color: rgb(112, 117, 122);
+  display: inline;
+  font-size: 16px;
+  font-weight: 400;
+  height: auto;
+  line-height: 20px;
+  text-align: left;
+  width: auto;
+}
+li.detail {
+  color: rgb(112, 117, 122);
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  height: 16px;
+  line-height: 16px;
+  width: 90.0469px;
+}
