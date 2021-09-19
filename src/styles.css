@@ -11,11 +11,11 @@ h1 {
 h2 {
   color: rgb(32, 33, 36);
  
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 400;
  
   line-height: 26px;
- margin: 0 auto;
+ 
   width: 326px;
 }
 .weatherApp {
@@ -29,6 +29,7 @@ h2 {
 ul {
   list-style: none;
   padding: 0;
+  text-transform: capitalize;
 }
 form {
   margin-bottom: 30px;
@@ -53,7 +54,7 @@ li.detail {
   width: 90px;
 }
 
-.temp{
+.temp-container{
 color:rgb(32, 33, 36);
 font-size:48px;
 font-weight:400;
