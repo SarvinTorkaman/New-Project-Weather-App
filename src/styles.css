@@ -1,5 +1,6 @@
 body {
   font-family: "Google Sans", arial, sans-serif;
+  background-color:#e3def0;
 }
 h1 {
   font-family: "Dosis", sans-serif;
@@ -9,16 +10,17 @@ h1 {
 }
 h2 {
   color: rgb(32, 33, 36);
-  display: block;
+ 
   font-size: 22px;
   font-weight: 400;
-  height: 26px;
+ 
   line-height: 26px;
-  text-align: left;
+ 
   width: 326px;
 }
 .weatherApp {
-  max-width:600px;
+  background-color: #fff;
+  max-width:700px;
   margin: 30px auto;
   padding: 30px;
   border: 1px solid rgb(148, 142, 142);
@@ -33,33 +35,34 @@ form {
 }
 li.time {
   color: rgb(112, 117, 122);
-  display: inline;
+  /* display: inline; */
   font-size: 16px;
   font-weight: 400;
   height: auto;
-  line-height: 20px;
-  text-align: left;
+ 
+  
   width: auto;
 }
 li.detail {
   color: rgb(112, 117, 122);
-  display: block;
+  /* display: block; */
   font-size: 12px;
   font-weight: 400;
-  height: 16px;
-  line-height: 16px;
-  width: 90.0469px;
+  /* height: 16px; */
+  /* line-height: 16px; */
+  width: 90px;
 }
 
 .temp{
   color:rgb(32, 33, 36);
 display:inline;
-font-family:"Google Sans", arial, sans-serif;
+
 font-size:48px;
 font-weight:400;
 height:auto;
 line-height:60px;
 width:auto;
+
 }
 .weatherApp footer{    
 font-size: 14px;
@@ -75,7 +78,7 @@ font-size: 28px;
 font-weight: 400;
 position: relative;
 line-height: 1;
-top: -16px;
+top: 6px;
 }
 
 .weatherApp .search-input{
@@ -83,7 +86,6 @@ top: -16px;
   background: #f9f7fe;
   border: none;
   padding: 15px 20px;
-  
   border-radius: 6px;
   color: rgba(39,33,66,.4);
   font-size: 16px;
