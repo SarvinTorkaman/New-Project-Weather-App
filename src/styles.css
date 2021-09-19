@@ -15,7 +15,7 @@ h2 {
   font-weight: 400;
  
   line-height: 26px;
- 
+ margin: 0 auto;
   width: 326px;
 }
 .weatherApp {
@@ -45,22 +45,18 @@ li.time {
 }
 li.detail {
   color: rgb(112, 117, 122);
-  /* display: block; */
+
   font-size: 12px;
   font-weight: 400;
-  /* height: 16px; */
-  /* line-height: 16px; */
+  
+  line-height: 1;
   width: 90px;
 }
 
 .temp{
-  color:rgb(32, 33, 36);
-display:inline;
-
+color:rgb(32, 33, 36);
 font-size:48px;
 font-weight:400;
-height:auto;
-line-height:60px;
 width:auto;
 
 }
@@ -74,11 +70,11 @@ color: rgba(39,33,66,.4);
 
 .weatherApp .unit{
 color: #212121;
-font-size: 28px;
+font-size: 16px;
 font-weight: 400;
 position: relative;
 line-height: 1;
-top: 6px;
+top: 16px;
 }
 
 .weatherApp .search-input{
@@ -90,18 +86,27 @@ top: 6px;
   color: rgba(39,33,66,.4);
   font-size: 16px;
   height: 50px;
-  line-height: 20px;}
+  line-height: 20px;
+margin: 10px auto;}
   
   .weatherApp .btn{
   background: #6d6bc1;
   font-weight: 700;
   font-size: 16px;
   padding: 15px 0;
+  
   border: none;
   height: 50px;
-  
+  margin: 10px auto;
+
 }
 .row.second{
   padding: 40px;
 }
 
+.weatherApp img{
+  margin-right: 10px;
+  float: left;
+  height: 64px;
+  width:64px;
+}
