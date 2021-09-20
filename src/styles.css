@@ -29,30 +29,31 @@ h2 {
 ul {
   list-style: none;
   padding: 0;
-  text-transform: capitalize;
+  
 }
+
+
 form {
   margin-bottom: 30px;
 }
-li.time {
+li, .description { 
   color: rgb(112, 117, 122);
-  /* display: inline; */
+  display:inline-block;
   font-size: 16px;
   font-weight: 400;
   height: auto;
- 
-  
   width: auto;
-}
-li.detail {
-  color: rgb(112, 117, 122);
-
-  font-size: 12px;
-  font-weight: 400;
-  
   line-height: 1;
+  
+}
+
+
+li.detail {
+  margin-top: 10px;
+  font-size: 12px;
   width: 90px;
 }
+
 
 .temp-container{
 color:rgb(32, 33, 36);
@@ -102,7 +103,7 @@ margin: 10px auto;}
 
 }
 .row.second{
-  padding: 40px;
+  padding: 30px;
 }
 
 .weatherApp img{
@@ -111,3 +112,5 @@ margin: 10px auto;}
   height: 64px;
   width:64px;
 }
+.description{float: right;}
+.description::first-letter{text-transform: uppercase;}
