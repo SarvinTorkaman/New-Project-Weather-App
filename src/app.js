@@ -7,7 +7,6 @@ function timeformat(time){
 }
 function displaytime(time){
 let date=new Date(time);
- 
 let hour= date.getHours();
 let mins=date.getMinutes();
 let days=["Sunday","Monday","Tuesday","Wednesday","Thurrsday","Friday","Saturday"];
@@ -22,8 +21,9 @@ function handleApiResponse(response){console.log(response);
     document.querySelector("#humidity").innerHTML=response.data.main.humidity;
     document.querySelector("#wind").innerHTML=Math.round(3.6*response.data.wind.speed);
     document.querySelector("#description").innerHTML=response.data.weather[0].description;
-    console.log(response.data.dt);
     document.querySelector("#time").innerHTML=displaytime(response.data.dt*1000);
+    document.querySelector("#icon").setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    document.querySelector("#icon").setAttribute("alt",response.data.weather[0].description);
 }
 
 
