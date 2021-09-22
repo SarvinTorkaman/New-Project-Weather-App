@@ -20,7 +20,6 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
   </head>
   <body>
     <div class="container">
@@ -29,26 +28,51 @@
         <form id="submit-form">
           <div class="row">
             <div class="col-md-9">
-          <input type="text" id="search-input" class="form-control search-input" placeholder="Enter a city..." autofocus />
-        </div> 
-        <div class="col-md-3 p-0"><input type="submit"  class="btn btn-primary w-100" value="Search" />
-        </div>
-        </div>
+              <input
+                type="text"
+                id="search-input"
+                class="form-control search-input"
+                value=""
+                placeholder="Enter a city..."
+                autofocus
+              />
+            </div>
+            <div class="col-md-3 p-0">
+              <input
+                type="submit"
+                class="btn btn-primary w-100"
+                value="Search"
+              />
+            </div>
+          </div>
         </form>
         <hr />
         <div class="row second">
           <div class="col-md-6">
-            <h2 id=city-name></h2>
+            <h2 id="city-name"></h2>
             <ul>
-              <li class="time"><span id=time></span> </li>
-              <li class="detail">Humidity: <span id=humidity></span>%, Wind: <span id=wind></span> </li>
+              <li class="time"><span id="time"></span></li>
+              <li class="detail">
+                Humidity: <span id="humidity"></span>%, Wind:
+                <span id="wind"></span>
+              </li>
             </ul>
           </div>
-          <div class="col-md-6 ">
-            <div class="temp-container d-flex justify-content-end"> <img id=icon src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="partly_cloudy"> <span id="temp"></span> <span class="unit"> °C | <a id="farenheit" href="#">°F</a></span>
+          <div class="col-md-6">
+            <div class="temp-container d-flex justify-content-end">
+              <img
+                id="icon"
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="partly_cloudy"
+              />
+              <span id="temp"></span>
+              <span class="unit">
+                <a id="celcius" class="active" href="#">°C</a> |
+                <a id="fahrenheit" href="#">°F</a></span
+              >
             </div>
-            <div class="description  " id=description></div>
-            </div>
+            <div class="description" id="description"></div>
+          </div>
         </div>
         <hr />
         <footer>

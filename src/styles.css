@@ -1,6 +1,6 @@
 body {
   font-family: "Google Sans", arial, sans-serif;
-  background-color:#e3def0;
+  background-color: #e3def0;
 }
 h1 {
   font-family: "Dosis", sans-serif;
@@ -10,17 +10,17 @@ h1 {
 }
 h2 {
   color: rgb(32, 33, 36);
- 
+
   font-size: 30px;
   font-weight: 400;
- 
+
   line-height: 26px;
- 
+
   width: 326px;
 }
 .weatherApp {
   background-color: #fff;
-  max-width:700px;
+  max-width: 700px;
   margin: 30px auto;
   padding: 30px;
   border: 1px solid rgb(148, 142, 142);
@@ -29,24 +29,21 @@ h2 {
 ul {
   list-style: none;
   padding: 0;
-  
 }
-
 
 form {
   margin-bottom: 30px;
 }
-li, .description { 
+li,
+.description {
   color: rgb(112, 117, 122);
-  display:inline-block;
+  display: inline-block;
   font-size: 16px;
   font-weight: 400;
   height: auto;
   width: auto;
   line-height: 1;
-  
 }
-
 
 li.detail {
   margin-top: 10px;
@@ -54,63 +51,73 @@ li.detail {
   width: 90px;
 }
 
-
-.temp-container{
-color:rgb(32, 33, 36);
-font-size:48px;
-font-weight:400;
-width:auto;
-
+.temp-container {
+  color: rgb(32, 33, 36);
+  font-size: 48px;
+  font-weight: 400;
+  width: auto;
 }
-.weatherApp footer{    
-font-size: 14px;
-margin-top: 40px;
-line-height: 18px;
-text-align: center;
-color: rgba(39,33,66,.4);
+.weatherApp footer {
+  font-size: 14px;
+  margin-top: 40px;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
 }
 
-.weatherApp .unit{
-color: #212121;
-font-size: 16px;
-font-weight: 400;
-position: relative;
-line-height: 1;
-top: 16px;
+.weatherApp .unit {
+  color: #212121;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: 16px;
 }
 
-.weatherApp .search-input{
+a {
+  text-decoration: none;
+}
+.weatherApp .search-input {
   display: inline-block;
   background: #f9f7fe;
   border: none;
   padding: 15px 20px;
   border-radius: 6px;
-  color: rgba(39,33,66,.4);
+  color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
   height: 50px;
   line-height: 20px;
-margin: 10px auto;}
-  
-  .weatherApp .btn{
+  margin: 10px auto;
+}
+
+.weatherApp .btn {
   background: #6d6bc1;
   font-weight: 700;
   font-size: 16px;
   padding: 15px 0;
-  
+
   border: none;
   height: 50px;
   margin: 10px auto;
-
 }
-.row.second{
+.row.second {
   padding: 30px;
 }
 
-.weatherApp img{
+.weatherApp img {
   margin-right: 10px;
   float: left;
   height: 64px;
-  width:64px;
+  width: 64px;
 }
-.description{float: right;}
-.description::first-letter{text-transform: uppercase;}
+.description {
+  float: right;
+}
+.description::first-letter {
+  text-transform: uppercase;
+}
+
+.weatherApp .active {
+  color: #212121;
+  cursor: default;
+}
