@@ -122,3 +122,21 @@ a {
   color: #212121;
   cursor: default;
 }
+
+.weather-fourcast {
+  margin: 30px 20px;
+  text-align: center;
+}
+.weather-forcast-date,
+.weather-forcast-temp-min {
+  opacity: 0.7;
+}
+
+.weather-forcast-temp {
+  font-size: small;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.weather-forcast-date {
+  font-weight: 400;
+}
