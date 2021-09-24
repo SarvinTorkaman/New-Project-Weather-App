@@ -12,15 +12,80 @@ function displaytime(time) {
     "Monday",
     "Tuesday",
     "Wednesday",
-    "Thurrsday",
+    "Thursday",
     "Friday",
     "Saturday",
   ];
-  let day = days[date.getDay()];
 
-  return `Last updated at ${day} ${timeformat(hour)}:${timeformat(mins)}`;
+  return `Last updated at ${days[date.getDay()]} ${timeformat(
+    hour
+  )}:${timeformat(mins)}`;
+}
+//4444
+
+function formatday(time) {
+  let date = new Date(time * 1000);
+
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+function displayWeatherForecast(response) {
+  console.log(response);
+  console.log(response.data.daily);
+  //let days = [];
+  let array = response.data.daily;
+  console.log(array.length);
+  // console.log(days);
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHtml = `<div class="row  d-flex justify-content-center">`;
+
+  array.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHtml =
+        forecastHtml +
+        `   
+    <div class="col-sm-2">
+      <div class="weather-forecast-date">${formatday(forecastDay.dt)}</div>
+      
+        <img
+         src="http://openweathermap.org/img/wn/${
+           forecastDay.weather[0].icon
+         }@2x.png"
+          alt="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].description
+          }@2x.png"
+          
+        />
+        <br />
+      
+      <div class="weather-forecast-temp">
+        <span class="weather-forecast-temp-min">°${Math.round(
+          forecastDay.temp.min
+        )}</span>
+        <span class="weather-forecast-temp-max">°${Math.round(
+          forecastDay.temp.max
+        )}</span>
+      </div>
+    </div>
+  `;
+    }
+  });
+  forecastHtml = forecastHtml + `</div>`;
+  // console.log(forecastHtml);
+  forecastElement.innerHTML = forecastHtml;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayWeatherForecast);
 }
 function handleApiResponse(response) {
+  console.log(response);
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -44,8 +109,10 @@ function handleApiResponse(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
-}
 
+  getForecast(response.data.coord);
+}
+//888
 function convertToFahrenheit(event) {
   event.preventDefault();
   document.querySelector("#temp").innerHTML = Math.round(
@@ -62,8 +129,7 @@ function convertToCelcius(event) {
 }
 
 function search(city) {
-  let apiKey = "dbf20d5c78580523bd2bd1f7ce5630d5";
-
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleApiResponse);
 }
@@ -73,13 +139,16 @@ function handleSubmitButton(event) {
   let cityname = document.querySelector("#search-input").value;
 
   search(cityname);
+
   document.getElementById("search-input").value = "";
   document.querySelector("#celcius").classList.add("active");
   document.querySelector("#fahrenheit").classList.remove("active");
 }
 
+function getresponse(response) {
+  console.log(response);
+}
 let celciustemp = null;
-
 search("babol");
 
 let fahrenheitLink = document.querySelector("#fahrenheit");
@@ -89,3 +158,7 @@ celciuslink.addEventListener("click", convertToCelcius);
 
 let submitForm = document.querySelector("#submit-form");
 submitForm.addEventListener("submit", handleSubmitButton);
+
+// let forecastAiKey = "de78e0e0e6d92ec1e8b40b7082dc0697";
+// let forecastUrl = `https://api.openweathermap.org/data/2.5/forecast/daily?q=paris&cnt=6&appid=dbf20d5c78580523bd2bd1f7ce5630d5&units=metric`;
+// axios.get(forecastUrl).then(getresponse);

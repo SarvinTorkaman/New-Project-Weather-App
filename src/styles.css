@@ -123,20 +123,26 @@ a {
   cursor: default;
 }
 
-.weather-fourcast {
+.weather-forecast {
   margin: 30px 20px;
   text-align: center;
 }
-.weather-forcast-date,
-.weather-forcast-temp-min {
+.weather-forecast-date,
+.weather-forecast-temp-min {
   opacity: 0.7;
 }
 
-.weather-forcast-temp {
-  font-size: small;
+.weather-forecast-temp {
+  font-size: 13px;
   font-weight: 500;
-  margin-top: 10px;
+  margin-top: 20px;
 }
-.weather-forcast-date {
+.weather-forecast-date {
   font-weight: 400;
+}
+.weather-forecast img {
+  display: inline-block;
+  margin: 0 auto;
+  width: 40px;
+  height: auto;
 }
