@@ -141,11 +141,12 @@ a {
   font-weight: 400;
 }
 .weather-forecast img {
-  display: inline-block;
   margin: 0 auto;
-  width: 100%;
+  float: none;
+  width: 42px;
   height: auto;
 }
+
 hr {
   height: 1px;
   background-color: #b8b7da;
