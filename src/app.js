@@ -24,7 +24,9 @@ function displaytime(time) {
 
 function formatday(time) {
   let date = new Date(time * 1000);
+
   let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
+
   return days[date.getDay()];
 }
 function displayWeatherForecast(response) {
@@ -47,23 +49,23 @@ function displayWeatherForecast(response) {
             forecastDay.weather[0].description
           }@2x.png"
           
-          
         />
         <br />
       
       <div class="weather-forecast-temp">
-        <span class="weather-forecast-temp-min">${Math.round(
+        <span class="weather-forecast-temp-min">°${Math.round(
           forecastDay.temp.min
-        )}°</span>
-        <span class="weather-forecast-temp-max">${Math.round(
+        )}</span>
+        <span class="weather-forecast-temp-max">°${Math.round(
           forecastDay.temp.max
-        )}°</span>
+        )}</span>
       </div>
     </div>
   `;
     }
   });
   forecastHtml = forecastHtml + `</div>`;
+
   forecastElement.innerHTML = forecastHtml;
 }
 
@@ -73,7 +75,6 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayWeatherForecast);
 }
 function handleApiResponse(response) {
-  //console.log(response);
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -101,6 +102,21 @@ function handleApiResponse(response) {
   getForecast(response.data.coord);
 }
 
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  document.querySelector("#temp").innerHTML = Math.round(
+    (celciustemp * 9) / 5 + 32
+  );
+  document.querySelector("#celcius").classList.remove("active");
+  document.querySelector("#fahrenheit").classList.add("active");
+}
+function convertToCelcius(event) {
+  event.preventDefault();
+  document.querySelector("#temp").innerHTML = Math.round(celciustemp);
+  document.querySelector("#celcius").classList.add("active");
+  document.querySelector("#fahrenheit").classList.remove("active");
+}
+
 function search(city) {
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -114,10 +130,17 @@ function handleSubmitButton(event) {
   search(cityname);
 
   document.getElementById("search-input").value = "";
+  document.querySelector("#celcius").classList.add("active");
+  document.querySelector("#fahrenheit").classList.remove("active");
 }
 
 let celciustemp = null;
 search("babol");
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+let celciuslink = document.querySelector("#celcius");
+celciuslink.addEventListener("click", convertToCelcius);
 
 let submitForm = document.querySelector("#submit-form");
 submitForm.addEventListener("submit", handleSubmitButton);
