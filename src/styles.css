@@ -118,11 +118,6 @@ a {
   text-transform: uppercase;
 }
 
-.weatherApp .active {
-  color: #212121;
-  cursor: default;
-}
-
 .weather-forecast {
   margin: 30px 20px;
   text-align: center;
