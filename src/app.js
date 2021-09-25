@@ -40,10 +40,10 @@ function displayWeatherForecast(response) {
       <div class="weather-forecast-date">${formatday(forecastDay.dt)}</div>
       
         <img
-         src="http://openweathermap.org/img/wn/${
+         src="https://openweathermap.org/img/wn/${
            forecastDay.weather[0].icon
          }@2x.png"
-          alt="http://openweathermap.org/img/wn/${
+          alt="https://openweathermap.org/img/wn/${
             forecastDay.weather[0].description
           }@2x.png"
           
@@ -70,7 +70,6 @@ function displayWeatherForecast(response) {
 function getForecast(coordinates) {
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayWeatherForecast);
 }
 function handleApiResponse(response) {
@@ -93,7 +92,7 @@ function handleApiResponse(response) {
     .querySelector("#icon")
     .setAttribute(
       "src",
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
   document
     .querySelector("#icon")
