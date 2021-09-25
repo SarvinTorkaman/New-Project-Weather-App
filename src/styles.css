@@ -143,6 +143,12 @@ a {
 .weather-forecast img {
   display: inline-block;
   margin: 0 auto;
-  width: 40px;
+  width: 100%;
   height: auto;
+}
+
+hr {
+  height: 1px;
+  background-color: #b8b7da;
+  border: none;
 }
